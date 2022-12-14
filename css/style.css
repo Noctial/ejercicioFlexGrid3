@@ -1,0 +1,79 @@
+:root{
+    --colorprincipal:  #8cbb8c;
+}
+
+*{
+   margin: 0px; 
+   padding: 0px;
+   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body{
+    display: grid;
+    grid-template-columns: 180px auto;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    width: 80%;
+    margin: auto;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--colorprincipal)
+}
+
+nav a{
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+aside h2{
+    font-size: 1.2em;
+}
+
+main{
+    grid-area: main;
+}
+
+main h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+main p{
+    text-align: justify;
+}
+
+.imagenes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin: 10px 0px;
+}
+
+.imagenes img{
+    width: 100%;
+    
+}
+
+footer{
+    grid-area: footer;
+    background-color: var(--colorprincipal);
+    text-align: center;
+    padding: 10px;
+}
